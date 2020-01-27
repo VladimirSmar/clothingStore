@@ -1,0 +1,19 @@
+<div class="signup-container">
+    <div class="signup">
+        <div class="signup_form-wrapper">
+            <div class="signup_title">Sign Up</div>
+            <form class="signup_form" [formGroup]="signupForm" (submit)="submit()" novalidate>
+                <div class="signup_form-group">
+                    <input class="signup_form-control" type="email" id="email-input" placeholder="Email"
+                        formControlName="email" autocomplete="email" />
+                </div>
+                <div class="signup_form-group">
+                    <input class="signup_form-control" type="password" id="password-input" placeholder="Password"
+                        formControlName="password" autocomplete="current-password" />
+                </div>
+                <button class="signup_submit-button" type="submit" [disabled]="!signupForm.valid">Submit</button>
+            </form>
+            <small><a class="signup_router-link" routerLink="/login">Already have an Account?</a></small>
+        </div>
+    </div>
+</div>
