@@ -5,6 +5,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -13,6 +14,9 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
 import { ProductComponent } from './pages/product/product.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { CategoriesComponent } from './pages/catalog/components/categories/categories.component';
+import { ProductsComponent } from './pages/catalog/components/products/products.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
     CatalogComponent,
     ProductComponent,
     CartComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    ToolbarComponent,
+    CategoriesComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +37,8 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
