@@ -58,6 +58,6 @@ export class SignupComponent implements OnInit, OnDestroy {
   }
 
   private _displayFailedSignup(): void {
-    console.log('Credentials are incorrect, try again.');
+    console.log('There is a problem with signing in, please try again');
   }
 }

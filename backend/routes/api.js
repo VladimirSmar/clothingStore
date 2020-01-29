@@ -15,6 +15,7 @@ router.get('/login', (req, res, next) => {
 });
 
 router.post('/signup', (req, res, next) => {
+    console.log(req.body);
     User.create(req.body).then(() => {
         User.find({}).then((users) => {
             res.send(users);
