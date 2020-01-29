@@ -60,7 +60,6 @@ export class AuthService {
 
   private _subscribeToCurrentUserSnapshot(): void {
     this.currentUserObservable.subscribe(user => this.currentUserSnapshot = user);
-    console.log(this.currentUserSnapshot);
   }
 
 }

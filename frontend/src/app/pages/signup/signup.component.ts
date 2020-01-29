@@ -43,12 +43,12 @@ export class SignupComponent implements OnInit, OnDestroy {
 
       this._subscriptions.push(
         this._auth.signup(email, password).subscribe(success => {
+          console.log(success);
           if (success) {
             this._router.navigate(['/catalog']);
           } else {
             this._displayFailedSignup();
           }
-
         })
       );
     } else {
